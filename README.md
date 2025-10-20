@@ -5,7 +5,6 @@ As state officials work to improve the health and well-being of children, data o
 
 View the report on GitHub Pages: https://anyamemensah.github.io/child-mal.
 
-Note: An [Excel version of the report](https://www.anyamemensah.com/child-maltreatment-data) is available on Ama Nyame-Mensah's website.
 
 <div align='center'>
 	<img src="./resources/lead_img.png" alt="Image of sample state-level report pages." width="65%" />
