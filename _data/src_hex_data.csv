@@ -1,0 +1,52 @@
+abbrev,row,column,State
+AK,8,0.5,Alaska
+AL,2,7.5,Alabama
+AR,3,6,Arkansas
+AZ,3,3,Arizona
+CA,3,2,California
+CO,4,3.5,Colorado
+CT,5,11,Connecticut
+DC,4,10.5,District of Columbia
+DE,4,9.5,Delaware
+FL,0,8.5,Florida
+GA,1,8,Georgia
+HI,0,0.5,Hawaii
+IA,5,5,Iowa
+ID,5,2,Idaho
+IL,5,6,Illinois
+IN,5,7,Indiana
+KS,3,5,Kansas
+KY,4,6.5,Kentucky
+LA,2,5.5,Louisiana
+MA,6,10.5,Massachusetts
+MD,4,8.5,Maryland
+ME,8,11.5,Maine
+MI,6,7.5,Michigan
+MN,6,4.5,Minnesota
+MO,4,5.5,Missouri
+MS,2,6.5,Mississippi
+MT,6,2.5,Montana
+NC,3,9,North Carolina
+ND,6,3.5,North Dakota
+NE,4,4.5,Nebraska
+NH,7,11,New Hampshire
+NJ,5,10,New Jersey
+NM,2,3.5,New Mexico
+NV,4,2.5,Nevada
+NY,6,9.5,New York
+OH,5,8,Ohio
+OK,2,4.5,Oklahoma
+OR,4,1.5,Oregon
+PA,5,9,Pennsylvania
+RI,6,11.5,Rhode Island
+SC,2,8.5,South Carolina
+SD,5,4,South Dakota
+TN,3,7,Tennessee
+TX,1,4,Texas
+UT,3,4,Utah
+VA,3,8,Virginia
+VT,7,10,Vermont
+WA,6,1.5,Washington
+WI,6,5.5,Wisconsin
+WV,4,7.5,West Virginia
+WY,5,3,Wyoming

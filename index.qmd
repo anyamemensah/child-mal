@@ -1,0 +1,138 @@
+---
+title: ''
+resources:
+  - './docs/ak_factsheet.html'
+  - './docs/al_factsheet.html'
+  - './docs/ar_factsheet.html'
+  - './docs/az_factsheet.html'
+  - './docs/ca_factsheet.html'
+  - './docs/co_factsheet.html'
+  - './docs/ct_factsheet.html'
+  - './docs/dc_factsheet.html'
+  - './docs/de_factsheet.html'
+  - './docs/fl_factsheet.html'
+  - './docs/ga_factsheet.html'
+  - './docs/hi_factsheet.html'
+  - './docs/ia_factsheet.html'
+  - './docs/id_factsheet.html'
+  - './docs/il_factsheet.html'
+  - './docs/in_factsheet.html'
+  - './docs/ks_factsheet.html'
+  - './docs/ky_factsheet.html'
+  - './docs/la_factsheet.html'
+  - './docs/ma_factsheet.html'
+  - './docs/md_factsheet.html'
+  - './docs/me_factsheet.html'
+  - './docs/mi_factsheet.html'
+  - './docs/mn_factsheet.html'
+  - './docs/mo_factsheet.html'
+  - './docs/ms_factsheet.html'
+  - './docs/mt_factsheet.html'
+  - './docs/nc_factsheet.html'
+  - './docs/nd_factsheet.html'
+  - './docs/ne_factsheet.html'
+  - './docs/nh_factsheet.html'
+  - './docs/nj_factsheet.html'
+  - './docs/nm_factsheet.html'
+  - './docs/nv_factsheet.html'
+  - './docs/ny_factsheet.html'
+  - './docs/oh_factsheet.html'
+  - './docs/ok_factsheet.html'
+  - './docs/or_factsheet.html'
+  - './docs/pa_factsheet.html'
+  - './docs/ri_factsheet.html'
+  - './docs/sc_factsheet.html'
+  - './docs/sd_factsheet.html'
+  - './docs/tn_factsheet.html'
+  - './docs/tx_factsheet.html'
+  - './docs/ut_factsheet.html'
+  - './docs/va_factsheet.html'
+  - './docs/vt_factsheet.html'
+  - './docs/wa_factsheet.html'
+  - './docs/wi_factsheet.html'
+  - './docs/wv_factsheet.html'
+  - './docs/wy_factsheet.html'
+format:
+  html:
+    theme: cosmo
+    css: resources/styles.css
+    toc: true
+    page-layout: full
+---
+
+<br>
+<div class='index-title-wrapper'>
+<span class='state-h1'>2023 State-Level Profiles</span>
+<h1 class='cmv-h1'>Child Maltreatment Victims</h1>
+</div>
+
+<p>As state officials work to improve the health and well-being of children, data on child maltreatment victims can play a key role in supporting their efforts. This resource provides a comparison of state-level demographic data from 2023 on child maltreatment victims across various dimensions, including gender, race/ethnicity, age, and type of maltreatment. For more information on child maltreatment, visit the [Children's Bureau's Child Maltreatment page](https://www.acf.hhs.gov/cb/data-research/child-maltreatment) from the Office of the Administration for Children and Families. The data for this report was sourced from the [Kids Count Data Center](https://datacenter.kidscount.org/data).
+
+Use the dropdown menu below to select and view a state report:</p>
+
+<select id='htmlDropdown' name='htmlDropdown' onchange='navigateToPage()'>
+  <option value=''>--Select a State--</option>
+  <option value='./docs/ak_factsheet.html'>Alaska</option>
+  <option value='./docs/al_factsheet.html'>Alabama</option>
+  <option value='./docs/ar_factsheet.html'>Arkansas</option>
+  <option value='./docs/az_factsheet.html'>Arizona</option>
+  <option value='./docs/ca_factsheet.html'>California</option>
+  <option value='./docs/co_factsheet.html'>Colorado</option>
+  <option value='./docs/ct_factsheet.html'>Connecticut</option>
+  <option value='./docs/dc_factsheet.html'>District of Columbia</option>
+  <option value='./docs/de_factsheet.html'>Delaware</option>
+  <option value='./docs/fl_factsheet.html'>Florida</option>
+  <option value='./docs/ga_factsheet.html'>Georgia</option>
+  <option value='./docs/hi_factsheet.html'>Hawaii</option>
+  <option value='./docs/ia_factsheet.html'>Iowa</option>
+  <option value='./docs/id_factsheet.html'>Idaho</option>
+  <option value='./docs/il_factsheet.html'>Illinois</option>
+  <option value='./docs/in_factsheet.html'>Indiana</option>
+  <option value='./docs/ks_factsheet.html'>Kansas</option>
+  <option value='./docs/ky_factsheet.html'>Kentucky</option>
+  <option value='./docs/la_factsheet.html'>Louisiana</option>
+  <option value='./docs/ma_factsheet.html'>Massachusetts</option>
+  <option value='./docs/md_factsheet.html'>Maryland</option>
+  <option value='./docs/me_factsheet.html'>Maine</option>
+  <option value='./docs/mi_factsheet.html'>Michigan</option>
+  <option value='./docs/mn_factsheet.html'>Minnesota</option>
+  <option value='./docs/mo_factsheet.html'>Missouri</option>
+  <option value='./docs/ms_factsheet.html'>Mississippi</option>
+  <option value='./docs/mt_factsheet.html'>Montana</option>
+  <option value='./docs/nc_factsheet.html'>North Carolina</option>
+  <option value='./docs/nd_factsheet.html'>North Dakota</option>
+  <option value='./docs/ne_factsheet.html'>Nebraska</option>
+  <option value='./docs/nh_factsheet.html'>New Hampshire</option>
+  <option value='./docs/nj_factsheet.html'>New Jersey</option>
+  <option value='./docs/nm_factsheet.html'>New Mexico</option>
+  <option value='./docs/nv_factsheet.html'>Nevada</option>
+  <option value='./docs/ny_factsheet.html'>New York</option>
+  <option value='./docs/oh_factsheet.html'>Ohio</option>
+  <option value='./docs/ok_factsheet.html'>Oklahoma</option>
+  <option value='./docs/or_factsheet.html'>Oregon</option>
+  <option value='./docs/pa_factsheet.html'>Pennsylvania</option>
+  <option value='./docs/ri_factsheet.html'>Rhode Island</option>
+  <option value='./docs/sc_factsheet.html'>South Carolina</option>
+  <option value='./docs/sd_factsheet.html'>South Dakota</option>
+  <option value='./docs/tn_factsheet.html'>Tennessee</option>
+  <option value='./docs/tx_factsheet.html'>Texas</option>
+  <option value='./docs/ut_factsheet.html'>Utah</option>
+  <option value='./docs/va_factsheet.html'>Virginia</option>
+  <option value='./docs/vt_factsheet.html'>Vermont</option>
+  <option value='./docs/wa_factsheet.html'>Washington</option>
+  <option value='./docs/wi_factsheet.html'>Wisconsin</option>
+  <option value='./docs/wv_factsheet.html'>West Virginia</option>
+  <option value='./docs/wy_factsheet.html'>Wyoming</option>
+</select>
+
+<script>
+function navigateToPage() {
+  var dropdown = document.getElementById('htmlDropdown');
+  var page = dropdown.value;
+
+  if (page) {
+    window.location.href = page;
+  }
+}
+</script>
+

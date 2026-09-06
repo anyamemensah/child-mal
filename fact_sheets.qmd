@@ -1,0 +1,169 @@
+---
+title: "`r params$report_year` `r params$state` Profile"
+format:
+  html:
+    embed-resources: true
+    css: resources/styles.css
+    theme: cosmo
+    toc: true
+    page-layout: full
+params:
+  state: NULL
+  abbrev: NULL
+  report_year: NULL
+  scripts_dir: NULL
+  data_dir: NULL
+---
+
+<p style="font-size: 0.9em;"><a href="../index.html">Return to the main page</a></p> 
+
+```{r}
+#| label: setup
+#| include: false
+#| echo: false
+#| warning: false
+
+## load current state's data + plotting functions
+source(file.path(params$scripts_dir, "data_load.R"), local = TRUE, echo = FALSE)
+source(file.path(params$scripts_dir, "visuals_load.R"), local = TRUE, echo = FALSE)
+
+## fetch report data
+src_data <- fetch_report_data(
+  report_year = params$report_year,
+  scripts_dir = params$scripts_dir,
+  data_dir = params$data_dir
+)
+
+## set current parameters
+curr_params <- params
+curr_params$valid_cols <- src_data$valid_cols
+curr_params$recoding_chr <- src_data$recoding_chr
+curr_params$child_data <- src_data$child_data
+curr_params$us_data <- src_data$us_data
+curr_params$hex_map_data <- src_data$hex_map_data
+
+## fetch current report data
+report_data <- fetch_state_data(params = curr_params)
+```
+
+<div class="title-wrapper">
+<div>
+```{r}
+#| label: current_map
+#| include: true
+#| echo: false
+#| warning: false
+
+## hex map
+render_hex_map(params = curr_params)
+```
+
+</div>
+<div style = "margin:auto;">
+<span class = "state-h3">`r curr_params$report_year` State Profile - `r curr_params$state`</span>
+<h3 class = "cmv-h3">Child Maltreatment Victims</h3>
+</div>
+</div>
+
+### About this Report {#sec-about-report .header}
+<p>This report provides data from `r curr_params$report_year` on child maltreatment victims in `r curr_params$state`. Child abuse and neglect, also referred to as child maltreatment, encompasses any recent action or failure to act by a parent or caregiver that results in significant physical or emotional harm, sexual abuse, exploitation, or death. It also includes any behavior (or lack of action) that poses an immediate risk of serious harm to a child. For more information on child maltreatment, visit the [Children's Bureau's Child Maltreatment page](https://www.acf.hhs.gov/cb/data-research/child-maltreatment) from the Office of the Administration for Children and Families. The data for this report was sourced from the [Kids Count Data Center](https://datacenter.kidscount.org/data). 
+
+<br>
+
+<h3 class = "header">Victims of child maltreatment</h3>
+<p>In `r curr_params$report_year`, there were `r formatC(report_data$state_data$num_pop_gender_under18, format = "d", big.mark=",")` children in `r curr_params$state`. During that same year, state officials reported that `r formatC(report_data$state_data$num_mal_age_under18, format = "d", big.mark=",")` children were victims of maltreatment, representing a rate of `r formatC(report_data$state_data$rate_mal_total, format = "d", big.mark=",")` per 1,000 children in the population. This report highlights the percentage of child maltreatment victims in `r curr_params$state`, broken down by the following categories:
+
+- Gender
+- Race and Ethnicity
+- Age
+- Maltreatment Type
+
+<br>
+
+### Gender {#sec-gender .header}
+Below is a table that displays the percentage of child maltreatment victims in `r curr_params$state` broken down by gender.<br>
+<span class = "note-p">*Note: N.R. means no data reported or less than <.5% reported.</span>
+
+```{r}
+#| label: gender_type_plot
+#| include: true
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig.show: "hold"
+#| fig.width: 12
+#| fig.height: 8
+
+## gender
+gender_plot <- render_viz_table(df = report_data$all_gender, child_pop = "state")
+```
+
+<div>`r gender_plot`</div>
+
+```{r}
+#| label: eth_type_plot
+#| include: true
+#| echo: false
+#| warning: false
+#| eval: true
+
+## race/ethnicity
+ethnicity_plot <- render_viz_table(df = report_data$all_race_eth, child_pop = "state")
+```
+
+<br>
+
+### Race and Ethnicity {#sec-ethnicity .header}
+Below is a table that displays the percentage of child maltreatment victims in `r curr_params$state` broken down by race and ethnicity.<br>
+<span class = "note-p">*Note: N.R. means no data reported or less than <.5% reported.</span>
+
+<div>`r ethnicity_plot`</div>
+
+```{r}
+#| label: age_type_plot
+#| include: true
+#| echo: false
+#| warning: false
+#| eval: true
+
+## age
+age_plot <- render_viz_table(df = report_data$all_age, child_pop = "state")
+```
+
+<br>
+
+### Age {#sec-age .header}
+Below is a table that displays the percentage of child maltreatment victims in `r curr_params$state` broken down by age.<br>
+<span class = "note-p">*Note: N.R. means no data reported or less than <.5% reported.</span>
+
+<div>`r age_plot`</div>
+
+```{r}
+#| label: mal_type_plot
+#| include: true
+#| echo: false
+#| warning: false
+#| eval: true
+
+## malType
+malType_plot <- render_viz_table(df = report_data$all_type, child_pop = "usa")
+```
+
+<br>
+
+### Type of Maltreatment {#sec-mal-type .header}
+Below is a table that displays the percentage of child maltreatment victims in `r curr_params$state` broken down by type of maltreatment.<br>
+<span class = "note-p">*Note: N.R. means no data reported or less than <.5% reported.</span>
+
+<div>`r malType_plot`</div>
+
+<br>
+<br>
+
+<div class="contribution-wrapper">
+  <div>This report was designed by <a href="https://www.anyamemensah.com/about">Analytics Made Accessible LLC</a>.</div><br>
+  <div><a href="https://www.anyamemensah.com/about">
+<img border="0" alt="Analytics Made Accessible LLC Logo" src="./resources/ama_logo.png" width="20%" height="auto" style = "margin-top:-3%">
+</a></div>
+</div>
+
